@@ -2,10 +2,12 @@
 <odoo>
 <record model="ir.ui.view" id="report_deliverynote">
 <field name="name">report_deliverynote</field>
-<field name="key">stock.report_deliverynote</field>
+<field name="key">delivery_note_report.report_deliverynote</field>
 <field name="arch" type="xml">
+        <t t-name="delivery_note_report.report_deliverynote">
         <t t-foreach="docs" t-as="o">
-            <t t-call="stock.report_delivery_note_document" t-lang="o.partner_id.lang"/>
+            <t t-call="delivery_note_report.report_delivery_note_document" t-lang="o.partner_id.lang"/>
+        </t>
         </t>
   </field>
   </record>
