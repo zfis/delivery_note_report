@@ -6,8 +6,8 @@
                             model="stock.picking"
                             string="Delivery Note"
                             report_type="qweb-pdf"
-                            name="stock.report_deliverynote"
-                            file="stock.report_deliverynote.xml"
+                            name="delivery_note_report.report_deliverynote"
+                            file="delivery_note_report.report_deliverynote.xml"
                             />
        </data>
       </odoo>
