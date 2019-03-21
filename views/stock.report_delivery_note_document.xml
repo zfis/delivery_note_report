@@ -162,8 +162,9 @@
                 </div>
             <!--</t>-->
          </t>
-		 </field>
 	</t>
 	</qweb>
+		 </field>
+	
   </record>
   </odoo>
