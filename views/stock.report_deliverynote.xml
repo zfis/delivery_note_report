@@ -4,11 +4,13 @@
 <field name="name">report_deliverynote</field>
 <field name="key">delivery_note_report.report_deliverynote</field>
 <field name="arch" type="xml">
+        <qweb>
         <t t-name="delivery_note_report.report_deliverynote">
         <t t-foreach="docs" t-as="o">
             <t t-call="delivery_note_report.report_delivery_note_document" t-lang="o.partner_id.lang"/>
         </t>
         </t>
+        </qweb>
   </field>
   </record>
   </odoo>
