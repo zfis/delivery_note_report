@@ -5,6 +5,8 @@
 <field name="model">stock</field>
 <field name="key">delivery_note_report.report_delivery_note_document</field>
 <field name="arch" type="xml">
+<qweb>
+<t t-name="stock.report_delivery_note_document">
 <t t-call="web.html_container">
             <!--<t t-call="web.external_layout">-->
                 <!--<t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
@@ -161,5 +163,7 @@
             <!--</t>-->
          </t>
 		 </field>
+	</t>
+	</qweb>
   </record>
   </odoo>
