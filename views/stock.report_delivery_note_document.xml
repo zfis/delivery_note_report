@@ -6,6 +6,7 @@
 <field name="key">delivery_note_report.report_delivery_note_document</field>
 <field name="arch" type="xml">
 <qweb>
+<?xml version="1.0"?>
 <t t-name="stock.report_delivery_note_document">
 <t t-call="web.html_container">
             <!--<t t-call="web.external_layout">-->
@@ -28,22 +29,22 @@
                     <span style="margin-left:90%; font-size:13">Форма № 1-ТН</span>-->
                     <br/><br/><br/><br/>
                     <h5 style="margin-right:0%; text-align:center !important; font-size:16">
-                          ТОВАРНО-ТРАНСПОРТНА НАКЛАДНА<br/>№___<span t-esc="o.display_name.split('/')[2]"/>______ <br/><span t-esc="o.date.strftime('„__%d_”____%m_________%Y__ р.')" />
+                          ТОВАРНО-ТРАНСПОРТНА НАКЛАДНА<br/>№___<span t-esc="o.display_name.split('/')[2]"/>______ <br/><span t-esc="o.date.strftime('„__%d_”____%m_________%Y__ р.')"/>
                     </h5>
-                    <span style="font-size:10"><span  style="font-size:13;">Автомобіль ____________________________________________ Причіп/напівпричіп ___________________________________ Вид перевезень __________________________________________</span><br/><span  style="font-size:10;  margin-left:8%;">(марка, модель, тип, реєстраційнпий номер)</span><span  style="font-size:10;  margin-left:12%;">(марка, модель, тип, реєстраційний номер)</span></span><p/>
-                    <span style="font-size:10"><span  style="font-size:13;">Автомобільний перевізник ____________________________________________________________________________________ Водій ____________________________________________________</span><br/><span  style="font-size:10;  margin-left:30%;">(найменування/П.І.Б.)</span><span  style="font-size:10;  margin-left:33%;">(П.І.Б., номер посвідчення водія)</span></span><p/>
-                    <span style="font-size:10"><span  style="font-size:13;">Замовник ____________________________________________<span t-field="o.sale_id.partner_id.parent_id.name"/>___________________________________________________________________________________________</span><br/><span  style="font-size:10;  margin-left:33%;">(найменування/ П.І.Б.)</span></span><p/>
-                    <span style="font-size:10"><span  style="font-size:13;">Вантажовідправник__________________ <b>ТОВ «Чугуївський м'ясокомбінат» , вул. Щорса, 50 Чугуїв Харківська обл. 63503 Україна </b>_________________________________</span><br/><span  style="font-size:10;  margin-left:30%;">(повне найменування, місцезнаходження /П.І.Б., місце проживання)</span></span><p/>
-                    <span style="font-size:10"><span  style="font-size:13;">Вантажоодержувач __________________ <b><span t-field="o.sale_id.partner_id.parent_id.name"/>, <span t-field="o.sale_id.partner_invoice_id.street"/>, <span t-field="o.sale_id.partner_invoice_id.city"/>, <span t-field="o.sale_id.partner_invoice_id.state_id"/>, <span t-field="o.sale_id.partner_invoice_id.zip"/>, <span t-field="o.sale_id.partner_invoice_id.country_id"/></b>________________________</span><br/><span  style="font-size:10;  margin-left:30%;">(повне найменування, місцезнаходження /П.І.Б., місце проживання)</span></span><p/>
-                    <span style="font-size:10"><span  style="font-size:13;">Пункт навантаження _вул. Щорса, 50 Чугуїв Харківська обл. 63503 Україна __ Пункт розвантаження ___<span t-field="o.sale_id.partner_shipping_id.street"/>, <span t-field="o.sale_id.partner_shipping_id.city"/>, <span t-field="o.sale_id.partner_shipping_id.state_id"/>, <span t-field="o.sale_id.partner_shipping_id.zip"/>, <span t-field="o.sale_id.partner_shipping_id.country_id"/>_______</span><br/><span  style="font-size:10;  margin-left:22%;">(місцезнаходження)</span><span  style="font-size:10;  margin-left:40%;">(місцезнаходження)</span></span><p/>
-                    <span style="font-size:10"><span  style="font-size:13;">Переадресування вантажу _____________________________________________________________________________________________________________________________________________,</span><br/><span  style="font-size:10;  margin-left:30%;">(найменування, місцезнаходження /П.І.Б., місце проживання нового вантажоодержувача; П.І.Б., посада та підпис відповідальної особи)</span><br/><span  style="font-size:13;">відпуск за довіреністю вантажоодержувача: серія __________ № ____________ від „_____”______________20___р., виданою _________________________________________________</span></span><p/>
-                    <span style="font-size:10"><span  style="font-size:13;">Вантаж наданий для перевезення у стані, що ____________________ правилам перевезень відповідних вантажів, номер пломби (за наявності) _______________________________,</span><br/><span  style="font-size:10;  margin-left:26%;">(відповідає/не відповідає)</span></span><p/>
+                    <span style="font-size:10"><span style="font-size:13;">Автомобіль ____________________________________________ Причіп/напівпричіп ___________________________________ Вид перевезень __________________________________________</span><br/><span style="font-size:10;  margin-left:8%;">(марка, модель, тип, реєстраційнпий номер)</span><span style="font-size:10;  margin-left:12%;">(марка, модель, тип, реєстраційний номер)</span></span><p/>
+                    <span style="font-size:10"><span style="font-size:13;">Автомобільний перевізник ____________________________________________________________________________________ Водій ____________________________________________________</span><br/><span style="font-size:10;  margin-left:30%;">(найменування/П.І.Б.)</span><span style="font-size:10;  margin-left:33%;">(П.І.Б., номер посвідчення водія)</span></span><p/>
+                    <span style="font-size:10"><span style="font-size:13;">Замовник ____________________________________________<span t-field="o.sale_id.partner_id.parent_id.name"/>___________________________________________________________________________________________</span><br/><span style="font-size:10;  margin-left:33%;">(найменування/ П.І.Б.)</span></span><p/>
+                    <span style="font-size:10"><span style="font-size:13;">Вантажовідправник__________________ <b>ТОВ «Чугуївський м'ясокомбінат» , вул. Щорса, 50 Чугуїв Харківська обл. 63503 Україна </b>_________________________________</span><br/><span style="font-size:10;  margin-left:30%;">(повне найменування, місцезнаходження /П.І.Б., місце проживання)</span></span><p/>
+                    <span style="font-size:10"><span style="font-size:13;">Вантажоодержувач __________________ <b><span t-field="o.sale_id.partner_id.parent_id.name"/>, <span t-field="o.sale_id.partner_invoice_id.street"/>, <span t-field="o.sale_id.partner_invoice_id.city"/>, <span t-field="o.sale_id.partner_invoice_id.state_id"/>, <span t-field="o.sale_id.partner_invoice_id.zip"/>, <span t-field="o.sale_id.partner_invoice_id.country_id"/></b>________________________</span><br/><span style="font-size:10;  margin-left:30%;">(повне найменування, місцезнаходження /П.І.Б., місце проживання)</span></span><p/>
+                    <span style="font-size:10"><span style="font-size:13;">Пункт навантаження _вул. Щорса, 50 Чугуїв Харківська обл. 63503 Україна __ Пункт розвантаження ___<span t-field="o.sale_id.partner_shipping_id.street"/>, <span t-field="o.sale_id.partner_shipping_id.city"/>, <span t-field="o.sale_id.partner_shipping_id.state_id"/>, <span t-field="o.sale_id.partner_shipping_id.zip"/>, <span t-field="o.sale_id.partner_shipping_id.country_id"/>_______</span><br/><span style="font-size:10;  margin-left:22%;">(місцезнаходження)</span><span style="font-size:10;  margin-left:40%;">(місцезнаходження)</span></span><p/>
+                    <span style="font-size:10"><span style="font-size:13;">Переадресування вантажу _____________________________________________________________________________________________________________________________________________,</span><br/><span style="font-size:10;  margin-left:30%;">(найменування, місцезнаходження /П.І.Б., місце проживання нового вантажоодержувача; П.І.Б., посада та підпис відповідальної особи)</span><br/><span style="font-size:13;">відпуск за довіреністю вантажоодержувача: серія __________ № ____________ від „_____”______________20___р., виданою _________________________________________________</span></span><p/>
+                    <span style="font-size:10"><span style="font-size:13;">Вантаж наданий для перевезення у стані, що ____________________ правилам перевезень відповідних вантажів, номер пломби (за наявності) _______________________________,</span><br/><span style="font-size:10;  margin-left:26%;">(відповідає/не відповідає)</span></span><p/>
                     <!--<span style="font-size:10"><span  style="font-size:13;">Вантаж наданий для перевезення у стані, що ____________________ правилам перевезень відповідних вантажів, номер пломби (за наявності) _______________________________,</span><br/><span  style="font-size:10;  margin-left:26%;">(відповідає/не відповідає)</span><br/><span  style="font-size:13;">кількість місць _______________________,  масою брутто, т____________________________, отримав водій/експедитор _____________________________________________________</span><br/><span  style="font-size:10;  margin-left:13%;">(словами)</span><span  style="font-size:10;  margin-left:20%;">(словами)</span><span  style="font-size:10;  margin-left:28%;">(П.І.Б., посада, підпис)</span><br/><span  style="font-size:10;  margin-left:13%;">Product deBrutto</span><br/><span  style="font-size:13;">Вантаж наданий для перевезення у стані, що ____________________ правилам перевезень відповідних вантажів, номер пломби (за наявності) _______________________________,</span><br/><span  style="font-size:10;  margin-left:26%;">(відповідає/не відповідає)</span><br/><span  style="font-size:13;">Бухгалтер (відповідальна особа вантажовідправника) _______________________________________________	Відпуск дозволив _______________________________________________</span><br/><span  style="font-size:10;  margin-left:40%;">(словами)</span><span  style="font-size:10;  margin-left:28%;">(П.І.Б., посада, підпис)</span></span><p/>-->
                     <!--<span style="font-size:10"><span  style="font-size:13;">Усього відпущено на загальну суму __________________________________________________________________________________, у т.ч. ПДВ _____________________________________</span><br/><span  style="font-size:10;  margin-left:40%;">(словами, з урахуванням ПДВ)</span></span><p/>-->
-                    <span style="font-size:10"><span  style="font-size:13;">Супровідні документи на вантаж _______________________________________________________________________________________________________________________________________</span></span><p/>
-                    <span style="font-size:10"><span  style="font-size:13;">______________________________________________________________________________________________________________________________________________________________________</span></span><p/>
-                    <span style="font-size:10"><span  style="font-size:13;">Транспортні послуги, які надаються автомобільним перевізником: _______________________________________________________________________________________________________</span></span><p/>
-                    <span style="font-size:10"><span  style="font-size:13;">______________________________________________________________________________________________________________________________________________________________________</span></span><p/>
+                    <span style="font-size:10"><span style="font-size:13;">Супровідні документи на вантаж _______________________________________________________________________________________________________________________________________</span></span><p/>
+                    <span style="font-size:10"><span style="font-size:13;">______________________________________________________________________________________________________________________________________________________________________</span></span><p/>
+                    <span style="font-size:10"><span style="font-size:13;">Транспортні послуги, які надаються автомобільним перевізником: _______________________________________________________________________________________________________</span></span><p/>
+                    <span style="font-size:10"><span style="font-size:13;">______________________________________________________________________________________________________________________________________________________________________</span></span><p/>
                     <p style="page-break-before:always;"> </p>
                     <span style="margin-left:83%; font-size:16">Продовження додатка</span>
                     <span style="margin-left:90%; font-size:13">Зворотний бік</span>
@@ -107,15 +108,15 @@
                           <tr>
                               
                               <td colspan="2">Всього:</td>
-                              <td align="center" class="text-center;"></td><!--Unit Price-->
-                              <td align="center" class="text-center;"></td>
+                              <td align="center" class="text-center;"/><!--Unit Price-->
+                              <td align="center" class="text-center;"><span t-esc="(round((current_weight+current_weight_tare)*10000))/10000"/></td>
                           </tr>
                           
                       </tbody>
                     </table>
                     <p/>
-                    <span><span  style="font-size:13;  margin-left:00%;">Здав (відповідальна особа вантажовідправника)</span><span  style="font-size:13;  margin-left:4%;">Прийняв водій/експедитор</span><span  style="font-size:13;  margin-left:4%;">Здав водій/експедитор</span><span  style="font-size:13;  margin-left:4%;">Прийняв (відповідальна особа вантажоодержувача)</span></span><p/>
-                    <span><span  style="font-size:13;  margin-left:2%;">______________________________________</span><span  style="font-size:13;  margin-left:6%;">_______________________________</span><span  style="font-size:13;  margin-left:1%;">_______________________________</span><span  style="font-size:13;  margin-left:3%;">________________________________________________</span><br/><span  style="font-size:10;  margin-left:8%;">(П.І.Б., посада, підпис)</span><span  style="font-size:10;  margin-left:16%;">(П.І.Б., посада, підпис)</span><span  style="font-size:10;  margin-left:8%;">(П.І.Б., посада, підпис)</span><span  style="font-size:10;  margin-left:16%;">(П.І.Б., посада, підпис)</span></span><p/>
+                    <span><span style="font-size:13;  margin-left:00%;">Здав (відповідальна особа вантажовідправника)</span><span style="font-size:13;  margin-left:4%;">Прийняв водій/експедитор</span><span style="font-size:13;  margin-left:4%;">Здав водій/експедитор</span><span style="font-size:13;  margin-left:4%;">Прийняв (відповідальна особа вантажоодержувача)</span></span><p/>
+                    <span><span style="font-size:13;  margin-left:2%;">______________________________________</span><span style="font-size:13;  margin-left:6%;">_______________________________</span><span style="font-size:13;  margin-left:1%;">_______________________________</span><span style="font-size:13;  margin-left:3%;">________________________________________________</span><br/><span style="font-size:10;  margin-left:8%;">(П.І.Б., посада, підпис)</span><span style="font-size:10;  margin-left:16%;">(П.І.Б., посада, підпис)</span><span style="font-size:10;  margin-left:8%;">(П.І.Б., посада, підпис)</span><span style="font-size:10;  margin-left:16%;">(П.І.Б., посада, підпис)</span></span><p/>
                     <br/>
                     <!--<span style="margin-left:35%; text-align:center !important; font-size:16">
                           <span>ВАНТАЖНО-РОЗВАНТАЖУВАЛЬНІ ОПЕРАЦІЇ</span>
@@ -142,19 +143,19 @@
                         </tr>
                         <tr>
                             <td>Навантаження</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td/>
+                            <td/>
+                            <td/>
+                            <td/>
+                            <td/>
                         </tr>
                         <tr>
                             <td>Розвантаження</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td/>
+                            <td/>
+                            <td/>
+                            <td/>
+                            <td/>
                         </tr>
                     </table>
                     <!--<p style="page-break-before:always;"> </p>
@@ -163,6 +164,7 @@
             <!--</t>-->
          </t>
 	</t>
+
 	</qweb>
 		 </field>
 	
